@@ -1,0 +1,1 @@
+cmd /min /C "set __COMPAT_LAYER=RUNASINVOKER && start VirtualBox-7.0.6-155176-Win

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Concert and Events</title>
+    <style>
+        /* Add your CSS for styling here */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul li {
+            margin: 10px;
+            position: relative;
+        }
+
+        nav ul li button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px; /* Fixed width for all buttons */
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        nav ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #333;
+        }
+
+        nav ul ul li {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        section {
+            display: none;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 45px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="main.html"><button>Home</button></a></li>
+            <li><button>Concert & Event Dates</button>
+                <ul>
+                    <li><a href="lincolinConcert.html"><button>Lincoln Concerts</button></a></li>
+                    <li><a href="liberty.html"><button>Liberty Concerts</button></a></li>
+                    <li><button>Past Events</button></li>
+                </ul>
+            </li>
+            <li><a href="shop.html"><button>EOB Shop</button></a></li>
+            <li><button>Scholarships</button>
+                <ul>
+                    <li><a href="cunningham.html"><button>Connor Cunningham Scholarship</button></a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html"><button>Contact Us</button></a></li>
+        </ul>
+    </nav>
+</header>
+
+<div style="text-align: center;"><h1>Concert & Event Dates 2023-2024</h1>
+<h3>The dates of Lincoln's Orchestra Concerts are as follows:</h3>
+    <p>Sunday, February 4, 2024 &#64 7pm ... Lincoln Middle School Gym</p>
+    <p>Sunday, October 27, 2024 &#64 7pm ... Lincoln Middle School Gym</p>
+    <p>Wednesday, December 13th 2024 &#64 7pm ... Holdiay Tour (8th grade only)</p>
+    </div>
+
+<!-- Add other sections as needed -->
+
+<footer>
+    <p>&copy; Powered by The Orchestra Booster Team</p>
+</footer>
+</body>
+</html>

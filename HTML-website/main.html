@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HS 2024</title>
+	<link rel="shortcut icon" type="image/x-icon" href="topLeft.png" />
+	<style>
+		body {
+			background-color: black;
+			color: white;
+		}
+
+		nav {
+			background-color: #333;
+			overflow: hidden;
+		}
+
+		nav a {
+			float: left;
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+
+		nav a:hover {
+			background-color: #ddd;
+			color: black;
+		}
+
+		.hidden {
+			display: none;
+		}
+
+		/* Style for the LightSpeed Bypass button */
+		#lightspeed-bypass-download {
+			background-color: black;
+			color: white;
+			border: none;
+			padding: 10px 20px;
+			cursor: pointer;
+			font-size: 16px;
+			border-radius: 4px;
+		}
+
+		#lightspeed-bypass-download:hover {
+			background-color: gray;
+		}
+	</style>
+	<script>
+		var originalInfoContent = "";
+		var originalGamesContent = "";
+
+		function displayAbout() {
+			hideDownloadLPbypass();
+
+			var info = document.getElementById("info");
+			resetOtherSections();
+			originalInfoContent = info.innerHTML;
+			info.innerHTML = "I'm just a helpful programmer :)";
+		}
+
+		function displayGames() {
+			hideDownloadLPbypass();
+
+		var games = document.getElementById("games");
+		resetOtherSections();
+		originalGamesContent = games.innerHTML;
+		games.innerHTML = "Here is a link to a Google Drive folder to download multiple games for free. <br>If it gets blocked, I will try to add the games into the website.<br><br>";
+
+		var gameLink = document.createElement("a");
+		gameLink.href = "https://drive.google.com/drive/folders/1Fa0E3128_Fq0UTCtHmctLFYdK7BNsH0O";
+		gameLink.textContent = "Game Folder";
+		gameLink.target = "_blank"; // Open in a new tab
+		games.appendChild(gameLink);
+		}
+
+		function goToHome() {
+			hideDownloadLPbypass();
+
+			var info = document.getElementById("info");
+			resetOtherSections();
+			info.innerHTML = "Welcome to the hacks of 2024"; // Updated content
+		}
+
+		function displayServices() {
+			showDownloadLPbypass();
+
+			var info = document.getElementById("info");
+			resetOtherSections();
+			info.innerHTML = "This program will close lightspeed on a loop so, make sure to keep it running in the background.<br> Try to put it onto your other desktop so when your teacher walks by they don't see it.<br> <br> <br>The file name is hw.txt so the system will not find you downloading something fishy.<br> Once downloaded save as '.bat' file so that the program will run, does not matter where you save the file to. ";
+		}
+
+		function displayContact() {
+			hideDownloadLPbypass();
+
+			var info = document.getElementById("info");
+			resetOtherSections();
+			info.innerHTML = "I cannot say who I am, but I can only say you're welcome ;)";
+		}
+
+		function resetOtherSections() {
+			var info = document.getElementById("info");
+			var games = document.getElementById("games");
+
+			if (info.innerHTML !== originalInfoContent) {
+				info.innerHTML = originalInfoContent;
+			}
+
+			if (games.innerHTML !== originalGamesContent) {
+				games.innerHTML = originalGamesContent;
+			}
+		}
+
+		function showDownloadLPbypass() {
+			var downloadButton = document.getElementById("lightspeed-bypass-download");
+			downloadButton.classList.remove("hidden");
+		}
+
+		function hideDownloadLPbypass() {
+			var downloadButton = document.getElementById("lightspeed-bypass-download");
+			downloadButton.classList.add("hidden");
+		}
+
+		function bypass() {
+			var link = document.createElement("a");
+			link.href = "hw.txt";
+			link.setAttribute("download", "hw.txt");
+			link.setAttribute("rel", "noopener noreferrer");
+			link.target = "_blank";
+			document.body.appendChild(link);
+			link.click();
+			document.body.removeChild(link);
+			delete link;
+		}
+	</script>
+</head>
+<body>
+<nav>
+	<a href="#" onclick="goToHome()">Home</a>
+	<a href="#" onclick="displayAbout()">About</a>
+	<a href="#" onclick="displayServices()">Services</a>
+	<a href="#" onclick="displayGames()">Games</a>
+	<a href="#" onclick="displayContact()">Contact</a>
+</nav>
+<h1>Welcome to High School 2024...</h1>
+<p id="info">I know school can be very boring and not fun so i'm here to make this year more fun... </p>
+<div id="games"></div>
+<button id="lightspeed-bypass-download" class="hidden" onclick="bypass()">LightSpeed Bypass</button>
+
+</body>
+</html>
